@@ -96,7 +96,7 @@ model=Sequential([
 model.compile(loss="sparse_categorical_crossentropy",metrics=['accuracy'],optimizer="adam")
 
 model.fit(tf.constant(input_texts),tf.constant(y),epochs=1000)
-model.export("MiniLLMModel.dat)
+model.export("MiniLLMModel.dat")
 predicted_word=''
 test='stray dog'
 for i in range(10):
@@ -112,6 +112,7 @@ for i in range(10):
     test=test+" "+predicted_word
 
 print(test)
+
 
 
 
